@@ -1,0 +1,58 @@
+seed: 73
+cuda: 0 # use_gpu
+env:
+  env_type: pomdp
+  env_name: PegInsertion-Square-XYZ-v0
+  num_eval_tasks: 10 # num of eval episodes
+
+train:
+  num_iters: 500 # number meta-training iterates
+  num_init_rollouts_pool: -1 # before training
+  use_expert_rollouts: 1 # positive means will load expert data (from demonstration folder)
+  num_rollouts_per_iter: 1
+
+  num_updates_per_iter: 1.0
+  # buffer params
+  buffer_size: 2e5
+  batch_size: 32 # to tune based on sampled_seq_len
+  sampled_seq_len: -1 # -1 is all, or positive integer
+  sample_weight_baseline: 0.0
+  buffer_type: seq_vanilla
+
+eval:
+  log_interval: 5 # num of iters
+  save_interval: -1
+  log_tensorboard: false
+
+policy:
+  separate: True
+  actor_type: normal # [normal, equi, aug, aug-aux, aux]
+  critic_type: normal # [normal, equi, aug, aug-aux, aux]
+  algo_name: sac
+
+  group_name:
+
+  action_embedding_size: 18  # divisible by 3 and 6 for C3 and C6
+  observ_embedding_size: 30
+  rnn_hidden_size: 126
+
+  dqn_layers: [256, 256]
+  policy_layers: [256, 256]
+  lr: 0.0003
+  gamma: 0.9
+  tau: 0.005
+  critic_aux_weight: 1.0
+  actor_aux_weight: 1.0
+
+  sac:
+    entropy_alpha: 0.01 # tend to be det policy...
+    automatic_entropy_tuning: true
+    alpha_lr: 0.0003
+    init_alpha: 0.1
+
+  td3:
+    ## since we normalize action space to [-1, 1]
+    ## the noise std is absolute value
+    exploration_noise: 0.1 
+    target_noise: 0.2
+    target_noise_clip: 0.5

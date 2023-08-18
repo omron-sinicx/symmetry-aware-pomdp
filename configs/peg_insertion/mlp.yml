@@ -1,0 +1,36 @@
+seed: 73
+cuda: 0 # use_gpu
+env:
+  env_type: pomdp
+  env_name: PegInsertion-Square-XYZ-v0
+  num_eval_tasks: 10 # num of eval episodes
+
+train:
+  num_iters: 500 # number meta-training iterates
+  num_init_rollouts_pool: -1 # before training
+  use_expert_rollouts: 1 # positive means will load expert data (from demonstration folder)
+  num_rollouts_per_iter: 1
+  buffer_size: 1e6
+  batch_size: 64
+
+eval:
+  log_interval: 5 # num of iters
+  save_interval: -1
+  log_tensorboard: false
+
+policy:
+  actor_type: mlp
+  critic_type: mlp
+  algo_name: sac
+
+  dqn_layers: [128, 128]
+  policy_layers: [128, 128]
+  lr: 0.0003
+  gamma: 0.9
+  tau: 0.005
+
+  sac:
+    entropy_alpha: 0.01
+    automatic_entropy_tuning: true
+    alpha_lr: 0.001
+    init_alpha: 0.1

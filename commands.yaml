@@ -1,0 +1,28 @@
+# XYZ
+# rnn
+python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-XYZ-v0 --seed 0 --cuda 0
+
+# mlp
+python3 policies/main.py --cfg configs/peg_insertion/mlp.yml --env PegInsertion-Square-XYZ-v0 --seed 0 --cuda 0
+
+# augmentation
+python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-XYZ-v0 --seed 0 --cuda 0 --group_name FlipXY --actor_type aug --critic_type aug
+
+# augmentation + symmetry losses
+python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-XYZ-v0 --seed 0 --cuda 0 --group_name FlipRotXY4 --actor_type aug-aux --critic_type aug-aux
+
+# equi
+python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-XYZ-v0 --seed 0 --cuda 0 --group_name FlipXY --actor_type equi --critic_type equi
+python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-XYZ-v0 --seed 0 --cuda 0 --group_name RotXY4 --actor_type equi --critic_type equi
+python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-XYZ-v0 --seed 0 --cuda 0 --group_name FlipRotXY4 --actor_type equi --critic_type equi
+
+# state
+python3 policies/main.py --cfg configs/peg_insertion/mlp.yml --env PegInsertion-Square-State-XYZ-v0 --seed 0 --cuda 0
+
+# replay
+python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-XYZ-v0 --group_name FlipRotXY4 --actor_type aug-aux --critic_type aug-aux --replay --policy_dir square_agent_505_perf1.000.pt
+python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Oblong-XYZ-v0 --group_name FlipRotXY4 --actor_type aug-aux --critic_type aug-aux --replay --policy_dir square_agent_505_perf1.000.pt
+
+
+
+

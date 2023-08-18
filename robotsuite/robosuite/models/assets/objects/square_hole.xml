@@ -1,0 +1,36 @@
+<mujoco model="hole">
+  <compiler angle="radian"/>
+  <default>
+    <default class="visual">
+      <geom group="0" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <default class="collision">
+      <geom group="0" type="mesh" solimp="0.9 0.95 0.001 0.5 2" solref=".004 1" condim="6"/>
+    </default>
+  </default>
+  <asset>
+    <texture file="../textures/red-wood.png" type="cube" name="red-wood" />
+    <material name="plate_mat" texture="red-wood" texrepeat="3 3" specular="0.4" shininess="0.1" />
+    <mesh file="square-hole/square_hole_c0.obj" name="hole_collision_top"/>
+    <mesh file="square-hole/square_hole_c1.obj" name="hole_collision_left"/>
+    <mesh file="square-hole/square_hole_c2.obj" name="hole_collision_bottom"/>
+    <mesh file="square-hole/square_hole_c3.obj" name="hole_collision_right"/>
+  </asset>
+
+  <!-- Always initialize the free camera to point at the origin. -->
+  <worldbody>
+    <body>
+      <body name="object">
+        <site rgba="0 0 0 0" size="0.005" pos="0 0 0.0" name="center"/>
+        <site pos="0 0 0" size="0.005 .1" quat="0.707105  0 0.707108 0 " rgba="1 0 0 0" type="cylinder" group="1"/>
+        <site pos="0 0 0" size="0.005 .1" quat="0.707105 0.707108 0 0" rgba="0 1 0 0" type="cylinder" group="1"/>
+        <site pos="0 0 0" size="0.005 .1" quat="1 0 0 0" rgba="0 0 1 0" type="cylinder" group="1"/>
+        <geom mesh="hole_collision_top" class="collision" group="0" solref=".004 1"/>
+        <geom mesh="hole_collision_left" class="collision" group="0" solref=".004 1"/>
+        <geom mesh="hole_collision_bottom" class="collision" group="0" solref=".004 1"/>
+        <geom mesh="hole_collision_right" class="collision" group="0" solref=".004 1"/>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>
+

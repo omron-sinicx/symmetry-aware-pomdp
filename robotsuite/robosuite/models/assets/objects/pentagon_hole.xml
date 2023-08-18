@@ -1,0 +1,55 @@
+<mujoco model="hole">
+  <compiler angle="radian"/>
+  <default>
+    <default class="visual">
+      <geom group="0" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <!-- <default class="collision">
+      <geom group="0" type="mesh" solimp="0.9 0.95 0.001 0.5 2" solref=".004 1" condim="6"/>
+    </default> -->
+  </default>
+  <asset>
+    <texture file="../textures/red-wood.png" type="cube" name="red-wood" />
+    <material name="plate_mat" texture="red-wood" texrepeat="3 3" specular="0.4" shininess="0.1" />
+    <mesh file="pentagon-hole/round_pentagon_hole_0.obj" name="round_pentagon_hole_0"/>
+    <mesh file="pentagon-hole/round_pentagon_hole_1.obj" name="round_pentagon_hole_1"/>
+    <mesh file="pentagon-hole/round_pentagon_hole_2.obj" name="round_pentagon_hole_2"/>
+    <mesh file="pentagon-hole/round_pentagon_hole_3.obj" name="round_pentagon_hole_3"/>
+    <mesh file="pentagon-hole/round_pentagon_hole_4.obj" name="round_pentagon_hole_4"/>
+
+    <mesh file="pentagon-hole/pentagon_hole_0.obj" name="pentagon_hole_0"/>
+    <mesh file="pentagon-hole/pentagon_hole_1.obj" name="pentagon_hole_1"/>
+    <mesh file="pentagon-hole/pentagon_hole_2.obj" name="pentagon_hole_2"/>
+    <mesh file="pentagon-hole/pentagon_hole_3.obj" name="pentagon_hole_3"/>
+    <mesh file="pentagon-hole/pentagon_hole_4.obj" name="pentagon_hole_4"/>
+    <mesh file="pentagon-hole/pentagon_hole_5.obj" name="pentagon_hole_5"/>
+    <mesh file="pentagon-hole/pentagon_hole_6.obj" name="pentagon_hole_6"/>
+    <mesh file="pentagon-hole/pentagon_hole_7.obj" name="pentagon_hole_7"/>
+  </asset>
+
+  <!-- Always initialize the free camera to point at the origin. -->
+  <worldbody>
+    <body>
+      <body name="object">
+        <site rgba="0 0 0 0" size="0.005" pos="0 0 0.0" name="center"/>
+        <site pos="0 0 0" size="0.005 .1" quat="0.707105  0 0.707108 0 " rgba="1 0 0 0" type="cylinder" group="1"/>
+        <site pos="0 0 0" size="0.005 .1" quat="0.707105 0.707108 0 0" rgba="0 1 0 0" type="cylinder" group="1"/>
+        <site pos="0 0 0" size="0.005 .1" quat="1 0 0 0" rgba="0 0 1 0" type="cylinder" group="1"/>
+        <!-- <geom mesh="pentagon_hole_0" class="collision"/>
+        <geom mesh="pentagon_hole_1" class="collision"/>
+        <geom mesh="pentagon_hole_2" class="collision"/>
+        <geom mesh="pentagon_hole_3" class="collision"/>
+        <geom mesh="pentagon_hole_4" class="collision"/>
+        <geom mesh="pentagon_hole_5" class="collision"/>
+        <geom mesh="pentagon_hole_6" class="collision"/>
+        <geom mesh="pentagon_hole_7" class="collision"/> -->
+        <geom mesh="round_pentagon_hole_0" type="mesh" group="0" solref=".004 1"/>
+        <geom mesh="round_pentagon_hole_1" type="mesh" group="0" solref=".004 1"/>
+        <geom mesh="round_pentagon_hole_2" type="mesh" group="0" solref=".004 1"/>
+        <geom mesh="round_pentagon_hole_3" type="mesh" group="0" solref=".004 1"/>
+        <geom mesh="round_pentagon_hole_4" type="mesh" group="0" solref=".004 1"/>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>
+
