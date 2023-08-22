@@ -1,19 +1,9 @@
-# Symmetry-aware Reinforcement Learning for Robotic Assembly under Partial Observability using Soft Robots
-
-This is the repo stored the code for our paper.
-
-```
-```
----
+# Symmetry-aware Reinforcement Learning for Robotic Assembly under Partial Observability using Soft Wrists
 ## Contents
 
 [Setup](#setup)
 
-[Domains](#domain)
-
 [Train](#train)
-
-[License, Acknowledgments](#license)
 
 ---
 
@@ -48,17 +38,25 @@ cd ..
 
 ## Train
 
-### Domains: PegInsertion-Square-Old-XYZ-v0, PegInsertion-Triangle/Pentagon/Hexagon/Round-XYZ-v0
-
-### Training
-
 ```
 export PYTHONPATH=${PWD}:$PYTHONPATH
+
+RSAC-Normal:
 python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-XYZ-v0 --seed 0 --cuda 0
+
+SAC-Obs:
 python3 policies/main.py --cfg configs/peg_insertion/mlp.yml --env PegInsertion-Square-XYZ-v0 --seed 0 --cuda 0
+
+RSAC-Aug:
 python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-XYZ-v0 --seed 0 --cuda 0 --group_name FlipXY --actor_type aug --critic_type aug
+
+RSAC-Aug-Aux:
 python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-XYZ-v0 --seed 0 --cuda 0 --group_name FlipRotXY4 --actor_type aug-aux --critic_type aug-aux
+
+RSAC-Equi:
 python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-XYZ-v0 --seed 0 --cuda 0 --group_name FlipXY --actor_type equi --critic_type equi
+
+SAC-State:
 python3 policies/main.py --cfg configs/peg_insertion/mlp.yml --env PegInsertion-Square-State-XYZ-v0 --seed 0 --cuda 0
 
 ```
@@ -68,14 +66,3 @@ python3 policies/main.py --cfg configs/peg_insertion/mlp.yml --env PegInsertion-
 python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-XYZ-v0 --group_name FlipRotXY4 --actor_type aug-aux --critic_type aug-aux --replay --policy_dir policy.pt
 ```
 
----
-
-## License
-
-This code is released under the MIT License.
-
----
-
-## Acknowledgments
-
-This codebase evolved from the [pomdp-baselines](https://github.com/twni2016/pomdp-baselines).
