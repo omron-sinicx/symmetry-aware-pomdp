@@ -1,11 +1,4 @@
-# Symmetry-aware Reinforcement Learning for Robotic Assembly under Partial Observability using Soft Wrists
-## Contents
-
-[Setup](#setup)
-
-[Train](#train)
-
----
+# Symmetry-aware Reinforcement Learning for Robotic Assembly under Partial Observability using a Soft Wrist
 
 ## Setup
 1. Install [anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/)
@@ -42,27 +35,27 @@ cd ..
 export PYTHONPATH=${PWD}:$PYTHONPATH
 
 RSAC-Normal:
-python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-XYZ-v0 --seed 0 --cuda 0
+python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-Old-XYZ-v0 --seed 0 --cuda 0
 
 SAC-Obs:
-python3 policies/main.py --cfg configs/peg_insertion/mlp.yml --env PegInsertion-Square-XYZ-v0 --seed 0 --cuda 0
+python3 policies/main.py --cfg configs/peg_insertion/mlp.yml --env PegInsertion-Square-Old-XYZ-v0 --seed 0 --cuda 0
 
 RSAC-Aug:
-python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-XYZ-v0 --seed 0 --cuda 0 --group_name FlipXY --actor_type aug --critic_type aug
+python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-Old-XYZ-v0 --seed 0 --cuda 0 --group_name FlipXY --actor_type aug --critic_type aug
 
 RSAC-Aug-Aux:
-python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-XYZ-v0 --seed 0 --cuda 0 --group_name FlipRotXY4 --actor_type aug-aux --critic_type aug-aux
+python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-Old-XYZ-v0 --seed 0 --cuda 0 --group_name FlipRotXY4 --actor_type aug-aux --critic_type aug-aux
 
 RSAC-Equi:
-python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-XYZ-v0 --seed 0 --cuda 0 --group_name FlipXY --actor_type equi --critic_type equi
+python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-Old-XYZ-v0 --seed 0 --cuda 0 --group_name FlipXY --actor_type equi --critic_type equi
 
 SAC-State:
-python3 policies/main.py --cfg configs/peg_insertion/mlp.yml --env PegInsertion-Square-State-XYZ-v0 --seed 0 --cuda 0
+python3 policies/main.py --cfg configs/peg_insertion/mlp.yml --env PegInsertion-Square-Old-State-XYZ-v0 --seed 0 --cuda 0
 
 ```
 
 ## Simulate a Trained Policy
 ```
-python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-XYZ-v0 --group_name FlipRotXY4 --actor_type aug-aux --critic_type aug-aux --replay --policy_dir policy.pt
+python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-Old-XYZ-v0 --group_name FlipRotXY4 --actor_type aug-aux --critic_type aug-aux --replay --policy_dir policy.pt
 ```
 
