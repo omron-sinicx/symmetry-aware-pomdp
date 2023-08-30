@@ -59,3 +59,8 @@ python3 policies/main.py --cfg configs/peg_insertion/mlp.yml --env PegInsertion-
 python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-Old-XYZ-v0 --group_name FlipRotXY4 --actor_type aug-aux --critic_type aug-aux --replay --policy_dir policy.pt
 ```
 
+## Peg & Hole Design File
+```
+See peg_and_hole_designs.f3d (AutoDesk project file), which can export mesh files for pegs and holes
+```
+
