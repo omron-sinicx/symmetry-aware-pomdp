@@ -1,8 +1,12 @@
-## Symmetry-aware Reinforcement Learning for Robotic Assembly under Partial Observability with a Soft Wrist
+# Symmetry-aware Reinforcement Learning for Robotic Assembly under Partial Observability with a Soft Wrist (ICRA-24)
 
 <div style="text-align: center;">
   <a href="https://arxiv.org/abs/2402.18002">ArXiv Paper</a> | <a href="https://www.youtube.com/watch?v=XU4Sbt_NnT8">Submission Video</a>
 </div>
+
+## TL;DR
+This study tackles the representative yet challenging contact-rich peg-in-hole task of robotic assembly, using a soft wrist that can operate more safely and tolerate lower-frequency control signals than a rigid one. Previous studies often use a fully observable formulation, requiring external setups or estimators for the peg-to-hole pose. In contrast, we use a partially observable formulation and deep reinforcement learning from demonstrations to learn a memory-based agent that acts purely on haptic and proprioceptive signals. Moreover, previous works do not incorporate potential domain symmetry and thus must search for solutions in a bigger space. Instead, we propose to leverage the symmetry for sample efficiency by augmenting the training data and constructing auxiliary losses to force the agent to adhere to the symmetry. Results in simulation with five different symmetric peg shapes show that our proposed agent can be comparable to or even outperform a state-based agent. In particular, the sample efficiency also allows us to learn directly on the real robot within 3 hours. 
+
 
 ## Setup
 1. Install [anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/)
@@ -67,4 +71,7 @@ python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-
 ```
 See peg_and_hole_designs.f3d (AutoDesk project file), from which, mesh files for pegs and holes can be exported
 ```
+
+## Acknowledgments
+This repository is based on [pomdp-baselines](https://github.com/twni2016/pomdp-baselines) and [robosuite](https://github.com/ARISE-Initiative/robosuite).
 
