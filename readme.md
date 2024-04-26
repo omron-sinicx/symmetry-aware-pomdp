@@ -4,11 +4,11 @@
 
 <div style="text-align: center;">
   <div style="display: inline-block; margin-right: 20px;">
-    <img src="./images/motivation.png" alt="Motivation" style="width: 80%;" />
+    <img src="./images/motivation.png" alt="Motivation" style="width: 50%;" />
   </div>
   <div style="display: inline-block;">
-    <img src="./images/soft_sim.png" alt="Software Simulation" style="width: 45%;" />
-    <img src="./images/soft_real.png" alt="Software Realization" style="width: 45%;" />
+    <img src="./images/soft_sim.png" alt="Software Simulation" style="width: 30%;" />
+    <img src="./images/soft_real.png" alt="Software Realization" style="width: 30%;" />
   </div>
 </div>
 
