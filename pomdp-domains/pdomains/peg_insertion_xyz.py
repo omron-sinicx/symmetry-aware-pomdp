@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import numpy as np
 import gym
 from gym import spaces
@@ -20,8 +18,6 @@ class PegInsertionEnv(gym.Env):
         if peg_type == "triangle":
             robot = "SoftUR5eTriangle"
         elif peg_type == "square":
-            robot = "SoftUR5eSquare"
-        elif peg_type == "square-old":
             robot = "SoftUR5eSquareOld"
         elif peg_type == "pentagon":
             robot = "SoftUR5ePentagon"
