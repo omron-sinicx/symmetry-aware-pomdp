@@ -2,18 +2,6 @@
 
 [Arvix Paper](https://arxiv.org/abs/2402.18002) | [Submission Video](https://www.youtube.com/watch?v=XU4Sbt_NnT8)
 
-<div style="text-align: center;">
-  <div style="display: inline-block;">
-    <img src="./images/motivation.png" alt="Motivation" style="width: 30%; margin-right: 10px;" />
-  </div>
-  <div style="display: inline-block;">
-    <img src="./images/soft_sim.png" alt="Software Simulation" style="width: 30%; margin-right: 10px;" />
-  </div>
-  <div style="display: inline-block;">
-    <img src="./images/soft_real.png" alt="Software Realization" style="width: 30%;" />
-  </div>
-</div>
-
 ## Setup
 1. Install [anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/)
 2. Create and activate environment
