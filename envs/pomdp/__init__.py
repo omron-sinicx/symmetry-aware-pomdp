@@ -7,7 +7,7 @@ register(
     "PegInsertion-Square-XYZ-v0",
     entry_point='pdomains.peg_insertion_xyz:PegInsertionEnv',
     max_episode_steps=200,
-    kwargs={"peg_type": "square-old"}
+    kwargs={"peg_type": "square"}
 )
 
 register(
@@ -41,13 +41,6 @@ register(
 
 # MDPs
 register(
-    "PegInsertion-Square-State-XZ-v0",
-    entry_point='pdomains.peg_insertion_xz:PegInsertionEnv',
-    max_episode_steps=150,
-    kwargs={"peg_type": "square", "return_state": True}
-)
-
-register(
     "PegInsertion-Triangle-State-XYZ-v0",
     entry_point='pdomains.peg_insertion_xyz:PegInsertionEnv',
     max_episode_steps=200,
@@ -59,13 +52,6 @@ register(
     entry_point='pdomains.peg_insertion_xyz:PegInsertionEnv',
     max_episode_steps=200,
     kwargs={"peg_type": "square", "return_state": True}
-)
-
-register(
-    "PegInsertion-Square-Old-State-XYZ-v0",
-    entry_point='pdomains.peg_insertion_xyz:PegInsertionEnv',
-    max_episode_steps=200,
-    kwargs={"peg_type": "square-old", "return_state": True}
 )
 
 register(

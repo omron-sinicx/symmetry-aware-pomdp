@@ -23,9 +23,10 @@ class GroupHelper():
         self.act_x, self.act_y, self.act_z = 0, 1, 2
 
         self.support_domains = ['PegInsertion-Square-XYZ-v0',
-                                 'PegInsertion-Square-Old-XYZ-v0',
-                                'PegInsertion-Triangle-XYZ-v0', 'PegInsertion-Round-XYZ-v0', 
-                                'PegInsertion-Pentagon-XYZ-v0', 'PegInsertion-Hexagon-XYZ-v0'] 
+                                'PegInsertion-Triangle-XYZ-v0',
+                                'PegInsertion-Round-XYZ-v0',
+                                'PegInsertion-Pentagon-XYZ-v0',
+                                'PegInsertion-Hexagon-XYZ-v0'] 
 
         if self.group_name == 'FlipXY' and define_group:  # D2 group
             if self.env_name in self.support_domains:

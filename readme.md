@@ -4,7 +4,7 @@
 1. Install [anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/)
 2. Create and activate environment
 ```
-conda create --env symm_pomdp python=3.8.16
+conda create --name symm_pomdp python=3.8.16
 conda activate symm_pomdp
 ```
 3. Clone this repository and install required packages

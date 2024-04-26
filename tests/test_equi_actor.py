@@ -95,7 +95,7 @@ def test_actor(domain, group):
 if __name__ == "__main__":
 
     parser = ArgumentParser()
-    parser.add_argument('--domain', type=str, default="PegInsertion-Square-Old-XYZ-v0")
+    parser.add_argument('--domain', type=str, default="PegInsertion-Square-XYZ-v0")
     parser.add_argument('--group', type=str, default="FlipXY")
     args = parser.parse_args()
 
