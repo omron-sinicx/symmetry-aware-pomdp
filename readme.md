@@ -1,6 +1,8 @@
 ## Symmetry-aware Reinforcement Learning for Robotic Assembly under Partial Observability with a Soft Wrist
 
-[Arvix Paper](https://arxiv.org/abs/2402.18002) | [Submission Video](https://www.youtube.com/watch?v=XU4Sbt_NnT8)
+<div style="text-align: center;">
+  <a href="https://arxiv.org/abs/2402.18002">ArXiv Paper</a> | <a href="https://www.youtube.com/watch?v=XU4Sbt_NnT8">Submission Video</a>
+</div>
 
 ## Setup
 1. Install [anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/)
