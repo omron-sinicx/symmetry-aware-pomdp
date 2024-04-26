@@ -2,18 +2,19 @@
 
 [Arvix Paper](https://arxiv.org/abs/2402.18002) | [Submission Video](https://www.youtube.com/watch?v=XU4Sbt_NnT8)
 
-<div style="display: flex; justify-content: center;">
-  <figure style="margin-right: 20px;">
-    <img src="./images/motivation.png" alt="Image 1" style="width: 33%;" />
-  </figure>
-  <figure style="margin-right: 20px;">
-    <img src="./images/soft_sim.png" alt="Image 1" style="width: 33%;" />
-    <figcaption>Simulated Soft Wrist in MuJoCo</figcaption>
-  </figure>
-  <figure>
-    <img src="./images/soft_real.png" alt="Image 2" style="width: 33%;" />
-    <figcaption>Real Soft Wrist</figcaption>
-  </figure>
+<div style="text-align: center;">
+  <div style="display: inline-block; margin-right: 20px;">
+    <img src="./images/motivation.png" alt="Motivation" style="width: 100%;" />
+    <figcaption style="text-align: center;">Motivation</figcaption>
+  </div>
+  <div style="display: inline-block;">
+    <img src="./images/soft_sim.png" alt="Software Simulation" style="width: 45%;" />
+    <figcaption style="text-align: center;">Software Simulation</figcaption>
+  </div>
+  <div style="display: inline-block;">
+    <img src="./images/soft_real.png" alt="Software Realization" style="width: 45%;" />
+    <figcaption style="text-align: center;">Software Realization</figcaption>
+  </div>
 </div>
 
 ## Setup
