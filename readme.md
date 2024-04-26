@@ -1,4 +1,20 @@
-# Symmetry-aware Reinforcement Learning for Robotic Assembly under Partial Observability with a Soft Wrist
+## Symmetry-aware Reinforcement Learning for Robotic Assembly under Partial Observability with a Soft Wrist
+
+[Arvix Paper](https://arxiv.org/abs/2402.18002) | [Submission Video](https://www.youtube.com/watch?v=XU4Sbt_NnT8)
+
+<div style="display: flex; justify-content: center;">
+  <figure style="margin-right: 20px;">
+    <img src="./images/motivation.png" alt="Image 1" style="width: 100%;" />
+  </figure>
+  <figure style="margin-right: 20px;">
+    <img src="./images/soft_sim.png" alt="Image 1" style="width: 100%;" />
+    <figcaption>Simulated Soft Wrist in MuJoCo</figcaption>
+  </figure>
+  <figure>
+    <img src="./images/soft_real.png" alt="Image 2" style="width: 100%;" />
+    <figcaption>Real Soft Wrist</figcaption>
+  </figure>
+</div>
 
 ## Setup
 1. Install [anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/)
