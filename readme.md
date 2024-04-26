@@ -34,22 +34,22 @@ cd ..
 ```
 export PYTHONPATH=${PWD}:$PYTHONPATH
 
-RSAC-Normal:
+# RSAC-Normal:
 python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-Old-XYZ-v0 --seed 0 --cuda 0
 
-SAC-Obs:
+# SAC-Obs:
 python3 policies/main.py --cfg configs/peg_insertion/mlp.yml --env PegInsertion-Square-Old-XYZ-v0 --seed 0 --cuda 0
 
-RSAC-Aug:
+# RSAC-Aug:
 python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-Old-XYZ-v0 --seed 0 --cuda 0 --group_name FlipXY --actor_type aug --critic_type aug
 
-RSAC-Aug-Aux:
+# RSAC-Aug-Aux:
 python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-Old-XYZ-v0 --seed 0 --cuda 0 --group_name FlipRotXY4 --actor_type aug-aux --critic_type aug-aux
 
-RSAC-Equi:
+# RSAC-Equi:
 python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-Square-Old-XYZ-v0 --seed 0 --cuda 0 --group_name FlipXY --actor_type equi --critic_type equi
 
-SAC-State:
+# SAC-State:
 python3 policies/main.py --cfg configs/peg_insertion/mlp.yml --env PegInsertion-Square-Old-State-XYZ-v0 --seed 0 --cuda 0
 
 ```
@@ -61,6 +61,6 @@ python3 policies/main.py --cfg configs/peg_insertion/rnn.yml --env PegInsertion-
 
 ## Peg & Hole Design File
 ```
-See peg_and_hole_designs.f3d (AutoDesk project file), which can export mesh files for pegs and holes
+See peg_and_hole_designs.f3d (AutoDesk project file), from which, mesh files for pegs and holes can be exported
 ```
 
