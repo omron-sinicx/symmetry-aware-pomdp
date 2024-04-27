@@ -82,7 +82,7 @@ See peg_and_hole_designs.f3d (AutoDesk project file), from which, mesh files for
 This repository is based on [pomdp-baselines](https://github.com/twni2016/pomdp-baselines) and [robosuite](https://github.com/ARISE-Initiative/robosuite).
 
 ## Citation
-If you found our work helpful, please cite us as
+If you find our work helpful to your research, please cite us as
 ```
 @article{nguyen2024symmetry,
   title={Symmetry-aware Reinforcement Learning for Robotic Assembly under Partial Observability with a Soft Wrist},
