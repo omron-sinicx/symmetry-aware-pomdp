@@ -37,6 +37,12 @@ cd ..
 
 ---
 
+## Generate demonstrations
+Demonstration files for tasks are already stored in /demonstrations. If you want to generate new demontration files, use a joystick (we used Logitech G F310) and run the script:
+```
+python pomdp-domains/scripts/generate_human_demonstrations.py
+```
+
 ## Train
 
 ```
