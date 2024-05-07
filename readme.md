@@ -1,7 +1,7 @@
 ## Symmetry-aware Reinforcement Learning for Robotic Assembly under Partial Observability with a Soft Wrist (ICRA-24)
 
 <div style="text-align: center;">
-  <a href="https://arxiv.org/abs/2402.18002">ArXiv Paper</a> | <a href="https://www.youtube.com/watch?v=XU4Sbt_NnT8">Submission Video</a>
+  <a href="https://omron-sinicx.github.io/symmetry-aware-pomdp/">Site</a> | <a href="https://arxiv.org/abs/2402.18002">ArXiv Paper</a> | <a href="https://www.youtube.com/watch?v=XU4Sbt_NnT8">Submission Video</a>
 </div>
 
 ## Abstract
